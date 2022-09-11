@@ -1,0 +1,78 @@
+<html>
+
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>DDoS protection | ArmanMsv.ir</title>
+        
+        <style type="text/css">
+            html{background-color:rgb(194, 194, 194);}
+            .main_t {height: 100%%; width: 100%%; border: 0px solid black;}
+            .main_t td {text-align: center;}
+            .main_t td.info {height: 100%%; text-align: center; vertical-align: top; padding-top: 5em;}
+            .sign { color: rgb(126, 92, 64); margin-top: 5em;}
+            .sign a { color: #ccc; }
+
+        </style>
+
+        <script>
+            function get_current_url() {
+                document.write(window.location.href);
+                return null;
+            }
+        </script>
+
+    </head>
+
+    <body>
+
+        <table class="main_t">
+
+            <tr>
+
+                <td class="info">
+
+                    <h1>DDoS protection is cheking your IP <a href="/blacklists/%s" target="_new">%s</a></h1>
+                    <p>Please click bellow to pass protection,</p>
+                    <a href=''><script>get_current_url();</script></a>
+                    <p>Or you will be automatically redirected to the requested page after %d seconds.</p>
+
+                    <div id="js_info">
+                        <p>To continue working with web-site, please make sure that you have enabled JavaScript.</p>
+                    </div>
+
+                </td>
+
+            </tr>
+
+            <tr>
+
+                <td class="sign">
+
+                    DDoS protection by <a href="https://armanmsv.ir"><span style="color: #ff0000;">Arman</span><span style="color: #ff0000;">Msv</span></a> <br/>
+                    <noscript>Please enable Javascript to see the requested page.</noscript>
+
+                </td>
+
+            </tr>
+
+        </table>
+
+        <script type="text/javascript">
+
+            document.getElementById('js_info').style.display = 'none';
+            var date = new Date();
+
+            days = '%s';
+            date.setTime(date.getTime() + (days * 24*60*60*1000));
+            document.cookie = '%s' + "=" + escape('%s') + "; expires = " + date.toGMTString() + "; path=/";
+
+            setTimeout(function(){
+            window.location.reload(1);
+            }, %d);
+
+        </script>
+        
+    </body>
+</html>
+
+
