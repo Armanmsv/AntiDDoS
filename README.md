@@ -1,4 +1,4 @@
-# anti-ddos-lite
+# Anti-DDoD
 A small PHP Script to protect your site against DDoS attack.
 
 ## Description
